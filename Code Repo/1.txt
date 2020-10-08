@@ -1,0 +1,125 @@
+Vid 1 - 
+
+VirtualDOM makes React work faster than javascript
+
+React helps us by making reusable web components
+
+Web Components
+
+6. JSX Practice:
+attempt:
+import React from 'react'
+import ReactDOM from 'react-dom'
+ 
+let az_banguis = '<ul><li>u</li><li>aint</li><li>going no where</li></ul>'
+ 
+ReactDOM.render(az_banguis, document.getElementById('root'))
+
+Answer:
+import React from "react"
+import ReactDOM from "react-dom"
+ 
+ReactDOM.render(
+ <ul>
+   <li>1</li>
+   <li>2</li>
+   <li>3</li>
+ </ul>,
+ document.getElementById("root")
+)
+
+8. React Functional Components Practice:
+// Objectives:
+// 1. Set up the basic React code from scratch
+// 2. Create a functional component called MyInfo that returns the following UI:
+   // a. An h1 with your name
+   // b. A paragraph with a little blurb about yourself
+   // c. An ordered or unordered list of the top 3 vacation spots you'd like to visit
+// 3. Render an instance of that functional component to the browser
+// Extra challenge: learn on your own (Google!) how you can add some style to your page.
+// (We will also cover this in an upcoming lesson).
+ 
+import React from 'react'
+import ReactDOM from 'react-dom'
+ 
+function MyInfo() {
+ return(
+   <div>
+     <h1>Peter </h1>
+     <p>this is a paragraph</p>
+     <ol>
+       <li>dog</li>
+       <li>cat</li>
+       <li>monkey</li>
+     </ol>
+   </div>
+ )
+}
+ 
+ReactDOM.render(<MyInfo />, document.getElementById('root'))
+
+12. React Parent/Child component practice
+// Set up the React app from scratch
+// Render an App component (defined in a separate file)
+// Inside App, render:
+ // 1. A Navbar component
+ // 2. A MainContent component
+ // 3. A Footer component
+ 
+import React from 'react'
+import ReactDOM from 'react-dom'
+ 
+import App from './App'
+ 
+ReactDOM.render(<App />, document.getElementById('root'))
+
+import React from 'react'
+import Navbar from './Navbar'
+import MainContent from './MainContent'
+import Footer from './Footer'
+ 
+function App() {
+   return(
+       <div>
+           <Navbar />
+           <MainContent />
+           <Footer />
+       </div>
+   )
+}
+ 
+export default App
+
+import React from 'react'
+ 
+function Footer(){
+   return(
+       <div>
+       FOOTER
+       </div>
+   )
+}
+ 
+export default Footer
+
+import React from 'react'
+ 
+function MainContent() {
+   return(
+       <div>Content</div>
+   )
+}
+ 
+export default MainContent
+
+import React from 'react'
+ 
+function Navbar(){
+   return(
+       <div>
+       Navbar
+       </div>
+   )
+}
+ 
+export default Navbar
