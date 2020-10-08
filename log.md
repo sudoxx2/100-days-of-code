@@ -1,13 +1,13 @@
 # 100 Days Of Code - Log
 
-### Day 0: February 30, 2016 (Example 1)
-##### (delete me or comment me out)
+### Day 1: October 7th, 2020 
+##### 
 
-**Today's Progress**: Fixed CSS, worked on canvas functionality for the app.
+**Today's Progress**: 1 - JSX, ReactDOM, Functional Components, Parent/Child components 
 
-**Thoughts:** I really struggled with CSS, but, overall, I feel like I am slowly getting better at it. Canvas is still new for me, but I managed to figure out some basic functionality.
+**Thoughts:** It was fun making cool similiar HTML like code but they are called JSX and just learning the skeleton to each React file.
 
-**Link to work:** [Calculator App](http://www.example.com)
+**Link to work:** https://github.com/sudoxx2/100-days-of-code/commit/36bc96271ea510d2292667df22acf12d901fe109
 
 ### Day 0: February 30, 2016 (Example 2)
 ##### (delete me or comment me out)
