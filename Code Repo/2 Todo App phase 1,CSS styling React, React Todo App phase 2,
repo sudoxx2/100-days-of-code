@@ -1,0 +1,84 @@
+// From scratch, initialize the React app
+// Render an <App /> component
+// Create the <App /> component from scratch
+// Have the <App /> component render 3 or 4 checkboxes with paragraphs or spans next to it
+// like you're making a todo list with some hard-coded items on it
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+
+ReactDOM.render(<App />, document.getElementById('root'))
+
+import React from 'react'
+
+function App(){
+    return(
+        <div>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></input>
+            <label for="vehicle1"> I have a bike</label><br></br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car"></input>
+            <label for="vehicle2"> I have a car</label><br></br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"></input>
+            <label for="vehicle3"> I have a boat</label><br></br>
+        </div>
+    )
+}
+
+export default App
+
+__________________________________________________________________________________________________________________________________________________________________
+
+Styling React with CSS classes
+
+child components of parent components do not need to have a pointer to the CSS file associated with it. Only the parent component cant be point to the CSS Class
+
+Example:
+
+function Header() {
+    return (
+        <header className="navbar">This is the header</header>
+    )
+}
+__________________________________________________________________________________________________________________________________________________________________
+
+React Todo App 2
+
+/*
+Time to have fun styling! But first things first: 
+
+1. Change the input/p combo below to be a new component called <TodoItem />. <TodoItem /> (for now) will just have the same displayed data below (every todo item is the same) hardcoded inside of it. (We'll learn soon how to make the TodoItem more flexible)
+    
+2. Style up the page however you want! You're welcome to use regular CSS (in the CSS file) or inline styles, or both!
+*/
+
+import React from "react"
+import TodoItem from './TodoItem'
+
+function App() {
+    return (
+        <div>
+            <TodoItem />
+            <TodoItem />
+            <TodoItem />
+        </div>
+    )
+}
+
+export default App
+
+import React from 'react'
+
+function TodoItem(){
+    return(
+        <div>
+            <input type="checkbox" />
+            <p>Placeholder text here</p>
+        </div>
+    )
+}
+
+export default TodoItem
+
+
+
