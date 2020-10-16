@@ -1,0 +1,108 @@
+/* 
+Given a list of products (as an array of objects, as seen in productsData.js)
+render a <Product /> component (which you'll also need to create) for each
+product in the list.
+
+Make sure to use the array's `.map()` method to create these components, and 
+don't forget to pass a `key` prop to it to avoid the warning.
+*/
+
+import React from "react"
+import productsData from "./vschoolProducts"
+import Product from './Product'
+
+function App() {
+    
+    const productsDataMap = productsData.map(product => {
+        <Product key={product.id} name={product.name} price={product.price} description={product.description} />})
+    
+  return (
+    <div>
+        {productsDataMap}
+    </div>
+  )
+}
+
+export default App
+
+import React from 'react'
+
+function Product(props){
+    console.log(props)
+    return(
+        <div>
+            <p>{props.name}</p>
+            <p>{props.price}</p>
+            <p>{props.description}</p>
+        </div>
+    )
+}
+
+export default Product
+
+
+______________________________________________________________________________________________________________________
+
+Class Based components Practice
+
+/*
+
+Challenge:
+1. Convert all 3 components to be class-based
+2. Fix the small bug
+
+*/
+
+import React from "react"
+import ReactDOM from "react-dom"
+// #1
+
+class App extends React.Component {
+    render() {
+        return (
+            <div>
+                <Header />
+                <Greeting />
+            </div>
+        )
+    }
+}
+
+// #2
+
+class Header extends React.Component {
+    render(){
+        return(
+            <header>
+            <p>Welcome, {this.props.username}!</p>
+            </header>
+        )
+    }
+}
+
+class Greeting extends React.Component {
+    
+    render() {
+        const date = new Date()
+        const hours = date.getHours()
+        let timeOfDay
+        
+        if (hours < 12) {
+            timeOfDay = "morning"
+        } else if (hours >= 12 && hours < 17) {
+            timeOfDay = "afternoon"
+        } else {
+            timeOfDay = "night"
+        }
+        
+        return (
+            <h1>Good {timeOfDay} to you, sir or madam!</h1>
+        )
+    }
+}
+// #3
+
+
+ReactDOM.render(<App />, document.getElementById("root"))
+
+_____________________________________________________________________________________________________
